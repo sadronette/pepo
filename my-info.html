@@ -8,6 +8,7 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=o.7, maximum-scale=1" />
 </head>
 
 <body>
@@ -47,9 +48,18 @@
          src: url("https://dl.dropbox.com/scl/fi/ncr17693piksqwemt4ts5/PF-Pixelscript-Pro-Regular.ttf?rlkey=2de2wgfctpvhit579zhu77il8&st=azkeule8&dl=0");
       }
 
+      @font-face {
+         font-family: 'levi';
+         src: url("https://dl.dropbox.com/scl/fi/85w5mr0f3afpynqmaud85/Windows-Regular.ttf?rlkey=agjl4g2k8kf8v9w9gjxxcvn6q&st=o5gfmk1b&dl=0")
+      }
+
       ::selection {
          color: white;
          text-shadow: 0 0 3px black;
+      }
+
+      A:link {
+         text-decoration: none;
       }
 
       /*=============Body CSS=====================*/
@@ -82,14 +92,15 @@
          line-height: 2.5em;
          height: 150px;
          font-size: 16px;
-         background: url("https://file.garden/aOCBrSuXPw8tOlnO/cuteness.jpg");
-         background-size: 30%;
+         background: url("https://file.garden/aOCBrSuXPw8tOlnO/Infobanner.jpeg");
+         background-size: contain;
       }
 
       .header span {
          position: absolute;
          top: 100px;
-         color: #514246
+         color: #514246;
+         text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
       }
 
       .lacebow {
@@ -157,6 +168,7 @@
          border: 7px solid black;
          border-image: url(https://treflemefle.nekoweb.org/IMG/Borders/White-frill-border.gif)7 fill round;
          color: #6e6265;
+         font-family: 'levi';
 
       }
 
@@ -208,6 +220,7 @@
          padding: 10px;
          overflow: auto;
          color: #6e6265;
+         font-family: 'levi';
       }
 
       .title-wrap {
@@ -242,6 +255,7 @@
          background: linear-gradient(#fff7f7 40%, #b9a4aa7b 80%);
          box-shadow: inset 0 0px 10px #ffffff;
          color: #6e6265;
+         font-family: 'levi';
       }
 
       .second-half-row {
@@ -284,8 +298,16 @@
       }
 
       .paragraph img {
-         width: 190px;
+         width: 180px;
          cursor: pointer;
+         filter: grayscale(1);
+         box-shadow: inset 0px 0px 30px #ffffff;
+
+      }
+
+      .paragraph img::after {
+         border: 15px solid transparent;
+         backdrop-filter: blur(8px);
       }
 
       /*==============Pop up================*/
@@ -424,6 +446,40 @@
          right: -73px;
          bottom: -70px;
       }
+
+      .phone-hover {
+         pointer-events: none;
+         width: 100px;
+         position: absolute;
+         z-index: 99;
+         right: -40px;
+      }
+
+      .marin-hover {
+         width: 250px;
+         position: absolute;
+         top: -60px;
+         right: -50px;
+         z-index: 999;
+         transition: opacity .1s ease;
+      }
+
+      .marin-hover:hover {
+         opacity: 0;
+      }
+
+      .other-link {
+         width: 220px;
+         height: 150px;
+         padding: 10px;
+         overflow: auto;
+         position: absolute;
+         margin: auto;
+         left: 1px;
+         right: 1px;
+         top: 170px;
+         filter: grayscale(1);
+      }
    </style>
    <!-------the image pop up------------>
    <div id="popup" class="popup">
@@ -433,7 +489,7 @@
 
    <div class="main">
       <div class="header">
-         <span>meet the webmistress <img src="https://file.garden/aOCBrSuXPw8tOlnO/Needbow.gif" width="30" /></span>
+         <span>meet the webmistress <img src="https://file.garden/aOCBrSuXPw8tOlnO/graycrown_pixel" width="30" /></span>
       </div>
 
       <!-------first half start------------>
@@ -537,9 +593,41 @@
                <div class="hanging"></div>
                <div class="hanging" style="left: 100px;top:-4px;"></div>
             </div>
+            <div class="other-link">
+               <a href="https://nyscyra.nekoweb.org/">
+                  <img src="https://nyscyra.nekoweb.org/img/button.png">
+               </a>
+               <a href="https://lilithdev.neocities.org/">
+                  <img src="https://lilithdev.neocities.org/buttons/lilithdevbtn.gif">
+               </a>
+               <a href="https://kawaii.nekoweb.org/">
+                  <img src="https://kawaii.nekoweb.org/images/buttons/kawaiizuki.gif">
+               </a>
+               <a href="https://soni.nekoweb.org/">
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/soniweb.gif">
+               </a>
+               <a href="https://4ster.nekoweb.org/">
+                  <img src="https://files.catbox.moe/fgldew.gif">
+               </a>
+               <a href="https://rice.place/" target="_blank">
+                  <img src="https://rice.nekoweb.org/button/riceus.gif">
+               </a>
+               <a href="https://pipi.nekoweb.org/">
+                  <img src="https://i.postimg.cc/htzZyv8c/pipibutton4.gif">
+               </a>
+               <a href="https://champagne.nekoweb.org">
+                  <img src="https://champagne.nekoweb.org/素材/champagne_88x31.gif" width="88" height="31"
+                     title="champagne">
+               </a>
+               <a href="https://angs-corner.nekoweb.org/"><img src="https://i.imgur.com/rd7l8WZ.gif"
+                     referrerpolicy="no-referrer" />
+               </a>
+            </div>
          </div>
+         <img class="phone-hover" src="https://file.garden/aOCBrSuXPw8tOlnO/myinfo/phonegif.gif" />
       </div>
       <!-------second half end------------>
+      <img class="marin-hover" src="https://file.garden/aOCBrSuXPw8tOlnO/dollmarin.png" />
    </div>
    <!-------script for the pop up------------>
    <script>
