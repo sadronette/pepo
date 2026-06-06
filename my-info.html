@@ -47,6 +47,11 @@
          src: url("https://dl.dropbox.com/scl/fi/ncr17693piksqwemt4ts5/PF-Pixelscript-Pro-Regular.ttf?rlkey=2de2wgfctpvhit579zhu77il8&st=azkeule8&dl=0");
       }
 
+      ::selection {
+         color: white;
+         text-shadow: 0 0 3px black;
+      }
+
       /*=============Body CSS=====================*/
       body {
          background: url("https://file.garden/aOCBrSuXPw8tOlnO/essenceyes.jpeg");
@@ -57,15 +62,16 @@
       /*====everything goes under this div====*/
       .main {
          width: 730px;
-         height: fit-content;
+         height: auto;
          position: relative;
          display: block;
          z-index: 2;
          margin: 80px auto;
-         border-style: solid;
          border-width: 10px;
-         border-image: url("https://file.garden/ZlKNlprkUEDiwwYi/border%20png/P1edUQb_d.webp") 9 fill round;
+         border-style: solid;
+         border-image: url('https://file.garden/aOCBrSuXPw8tOlnO/weblace5.png') 220 fill round;
          padding: 6px;
+         background: #fff7f7;
       }
 
       .header {
@@ -79,21 +85,30 @@
          background: url("https://file.garden/aOCBrSuXPw8tOlnO/cuteness.jpg");
          background-size: 30%;
       }
-      .header span{
+
+      .header span {
          position: absolute;
          top: 100px;
+         color:#514246
       }
+
       .lacebow {
          width: auto;
          background: url("https://file.garden/aOCBrSuXPw8tOlnO/myinfo/bowfrills.gif");
          background-repeat: repeat-x;
          height: 80px;
+         position: relative;
+         filter: drop-shadow(0px 5px 4px #9287876c);
+         top: -460px;
       }
 
       .first-half-row {
          width: auto;
-         height: 500px;
-         border: solid thin;
+         height: 460px;
+         background: #ffffff;
+         position: relative;
+         top: 80px;
+         z-index: 3;
       }
 
       .elia {
@@ -101,50 +116,47 @@
          height: 440px;
          border-style: solid;
          border-width: 10px;
-         border-image: url("https://file.garden/ZlKNlprkUEDiwwYi/border%20png/ezgif-2e657cab657d91b5.webp") 7 fill round;
+         border-image: url("https://file.garden/aOCBrSuXPw8tOlnO/weblace3.png") 10 fill round;
          position: absolute;
          left: 20px;
-
+         background: #ffffff;
+         z-index: 999999;
       }
 
-      .filler-con {
-         width: 190px;
-         height: 420px;
-         border-style: solid;
-         border-width: 10px;
-         border-image: url("https://file.garden/ZlKNlprkUEDiwwYi/border%20png/ezgif-55fa07f83a3dc5.png") 7 fill round;
-         position: absolute;
-      }
-
-      .filler-con img {
+      .elia img {
          width: 260px;
-         position: absolute;
+         position: relative;
          top: -60px;
          left: -35px;
+         z-index: 99999;
       }
 
       /*outside of the small intro div*/
       .con1 {
          width: 450px;
          height: 250px;
-         border: solid thin;
-         border-radius: 5px;
          position: absolute;
-         right: 20px;
+         right: 10px;
+         border-width: 9px;
+         border-style: solid;
+         border-image: url(https://file.garden/ZlKNlprkUEDiwwYi/border%20png/wuDCEbv.png)10 fill round;
+         background: #fdfafa;
       }
 
       /*inside of the small intro div*/
       .con2 {
-         width: 430px;
-         height: 230px;
-         border: solid thin;
-         border-radius: 5px;
+         width: 420px;
+         height: 225px;
+         border-radius: 1px;
          margin: auto;
          position: relative;
-         bottom: -9px;
+         bottom: -3px;
          padding: 10px;
          background: #ffffff;
          overflow: auto;
+         border: 7px solid black;
+         border-image: url(https://treflemefle.nekoweb.org/IMG/Borders/White-frill-border.gif)7 fill round;
+         color: #6e6265;
 
       }
 
@@ -160,10 +172,11 @@
          z-index: 100;
          pointer-events: none;
          position: absolute;
-         right: -255px;
+         right: -230px;
          left: 1px;
          margin: auto;
-         top: 220px;
+         top: -10px;
+
       }
 
       .con2 span {
@@ -175,52 +188,229 @@
       .below-intro-con {
          width: 450px;
          height: 170px;
-         border: solid thin;
-         border-radius: 5px;
+         border-width: 9px;
+         border-style: solid;
+         border-image: url(https://file.garden/ZlKNlprkUEDiwwYi/border%20png/wuDCEbv.png)10 fill round;
          position: absolute;
-         right: 20px;
-         top: 500px;
+         right: 10px;
+         top: 260px;
+         background: #ffffff;
       }
 
       .below-intro-con2 {
-         width: 430px;
-         height: 150px;
-         border: solid thin;
-         border-radius: 5px;
+         width: 420px;
+         height: 145px;
+         border: 7px solid black;
+         border-image: url(https://treflemefle.nekoweb.org/IMG/Borders/White-frill-border.gif)7 fill round;
          margin: auto;
          position: relative;
-         bottom: -9px;
+         bottom: -5px;
          padding: 10px;
-         background: #ffffff;
          overflow: auto;
+         color: #6e6265;
+      }
+
+      .title-wrap {
+         position: relative;
       }
 
       .gif {
          float: right;
-         display: block;
          margin: 10px;
-         width: 115px;
+         width: 150px;
+         height: 150px;
          border: solid thin;
          position: relative;
+         z-index: 10;
+         pointer-events: none;
+         background: url("https://file.garden/aOCBrSuXPw8tOlnO/myinfo/webheart.gif");
+         background-size: contain;
       }
 
       .small-title {
-         width: 270px;
+         max-width: none;
+         width: 100%;
          height: 20px;
          padding: 10px;
          text-align: center;
-         border: solid thin;
+         border: solid thin #514246;
          border-radius: 5px;
          margin-bottom: 10px;
+         left: 1px;
+         padding: 10px;
          font-size: 15px;
          line-height: 0.1em;
+         background: linear-gradient(#fff7f7 40%, #b9a4aa7b 80%);
+         box-shadow: inset 0 0px 10px #ffffff;
+         color: #6e6265;
+      }
+
+      .second-half-row {
+         width: 700px;
+         height: 340px;
+         background: #ffffff;
+         position: relative;
+         margin-top: 20px;
+         top: -10px;
+         z-index: 3;
+         margin: auto;
+      }
+
+      .right-con {
+         width: 470px;
+         height: 330px;
+         border-width: 9px;
+         border-style: solid;
+         border-image: url(https://file.garden/ZlKNlprkUEDiwwYi/border%20png/wuDCEbv.png)10 fill round;
+         position: absolute;
+         right: 1px;
+         padding: 10px;
+      }
+
+      .right-con-inside-right-con {
+         border: 7px solid black;
+         border-image: url(https://treflemefle.nekoweb.org/IMG/Borders/White-frill-border.gif)7 fill round;
+         width: 210px;
+         height: 292px;
+         padding: 5px;
+         position: absolute;
+         right: 5px;
+         overflow: auto;
+      }
+
+      .paragraph {
+         width: auto;
+         height: 235px;
+         overflow: auto;
+      }
+
+      .paragraph img {
+         width: 190px;
+         cursor: pointer;
+      }
+
+      /*==============Pop up================*/
+      .popup {
+         display: none;
+         position: fixed;
+         z-index: 99999;
+         inset: 0;
+         background: #000000cc;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .popup img {
+         max-width: 30%;
+         max-height: 90%;
+         border: 1px solid white;
+         border-radius: 10px;
+      }
+
+      .close {
+         position: absolute;
+         top: 20px;
+         right: 30px;
+         color: white;
+         font-size: 40px;
+         cursor: pointer;
+      }
+
+      .left-con-inside-right-con {
+         border: 7px solid black;
+         border-image: url(https://treflemefle.nekoweb.org/IMG/Borders/White-frill-border.gif)7 fill round;
+         width: 220px;
+         height: 292px;
+         padding: 5px;
+         position: absolute;
+         left: 7px;
+         overflow: auto;
+      }
+
+      .mySlides1 {
+         display: none
+      }
+
+      .mySlides1 {
+         text-align: center;
+         padding: 0 10px;
+      }
+
+      .mySlides1 img {
+         width: 220px;
+         display: block;
+         position: absolute;
+         margin: auto;
+         left: 1px;
+         right: 1px;
+      }
+
+      /*PREV and NEXT button positioning CSS*/
+      .prev,
+      .next {
+         width: auto;
+         position: absolute;
+         top: 50%;
+         font-weight: bold;
+         user-select: none;
+         aspect-ratio: 2/2;
+         height: 40px;
+         filter: drop-shadow(1px 1px 0 #ffffff) drop-shadow(-1px 1px 0 #ffffff) drop-shadow(0 -1px 0 #ffffff) drop-shadow(1px 0 #ffffff);
+      }
+
+      /*Grey arrow background for both prev and next*/
+      .prev {
+         left: 0;
+         background-image: url(https://files.catbox.moe/n0djb6.webp);
+         background-size: 100% 100%;
+      }
+
+      .next {
+         right: 0;
+         background-image: url(https://files.catbox.moe/modov7.webp);
+         background-size: 100% 100%;
+      }
+
+      .left-con {
+         position: absolute;
+         left: 1px;
+         width: 230px;
+         height: auto;
+      }
+
+      .web-worker-title {
+         width: auto;
+         height: 50px;
+         background: url("https://file.garden/aOCBrSuXPw8tOlnO/myinfo/polkadotbanner.webp");
+         background-position: center;
+         background-repeat: no-repeat;
+         text-align: center;
+      }
+
+      .web-worker-title span {
+         font-size: 20px;
+         position: relative;
+         bottom: -8px;
+      }
+
+      .under {
+         width: auto;
+         height: 100px;
+         align-items: center;
       }
    </style>
+   <!-------the image pop up------------>
+   <div id="popup" class="popup">
+      <span class="close"> </span>
+      <img id="popup-img">
+   </div>
+
    <div class="main">
       <div class="header">
-      <span>meet the webmistress</span>
+         <span>meet the webmistress</span>
       </div>
-      <div class="lacebow"></div>
+
+      <!-------first half start------------>
       <div class="first-half-row">
          <div class="elia">
             <div class="filler-con">
@@ -237,8 +427,10 @@
          </div>
          <div class="below-intro-con">
             <div class="below-intro-con2">
-               <img class="gif" src="https://file.garden/aOCBrSuXPw8tOlnO/myinfo/webheart.gif" />
-               <div class="small-title">title</div>
+               <div class="title-wrap">
+                  <div class="gif"></div>
+                  <div class="small-title">title title</div>
+               </div>
                hello... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                labore
                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -248,5 +440,123 @@
             </div>
          </div>
       </div>
+      <!-------first half end----------->
+      <div class="lacebow"></div>
+      <!-------second half start------------>
+      <div class="second-half-row">
+         <div class="right-con">
+            <div class="right-con-inside-right-con">
+               <div class="small-title">paragraph</div>
+               <div class="paragraph">
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/fred1.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/fred2.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/fred3.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/au.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/cath.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/cat2.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/florp.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/nari.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/nahl.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/ez.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/qui.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/rika.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/ky.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/gr.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/light.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/marissa.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/sheis/lisa.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/ak.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/era.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/ishie.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/gennie.jpeg" />
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/gen2.jpeg" />
+               </div>
+            </div>
+            <div class="left-con-inside-right-con">
+               <!---------Selfie 1--------------->
+               <div class="mySlides1">
+                  <img src="https://file.garden/aOCBrSuXPw8tOlnO/Charlotte-sprites/Faces/charlottedecal.png">
+               </div>
+               <!---------Selfie 2--------------->
+               <div class="mySlides1">
+                  <img src="https://i.pinimg.com/736x/7c/84/3d/7c843d9a9cd8acd08b4fb3686d0a6579.jpg">
+               </div>
+               <!---------Selfie 3--------------->
+               <div class="mySlides1">
+                  <img src="https://i.pinimg.com/736x/c5/41/97/c541973185aca9c48534b7d877dcaca6.jpg">
+               </div>
+               <!---------Selfie 4--------------->
+               <div class="mySlides1">
+                  <img src="https://i.pinimg.com/736x/bc/ce/6e/bcce6e5104160fe656c5734db67fda04.jpg">
+               </div>
+               <div class="slider-buttons">
+                  <a class="prev" onclick="plusSlides(-1)"></a>
+                  <a class="next" onclick="plusSlides(1)"></a>
+               </div>
+            </div>
+         </div>
+         <!-------divider ------------>
+         <div class="left-con">
+            <div class="web-worker-title"><span>web worker</span></div>
+            <div class="under">
+               <img src="https://file.garden/aOCBrSuXPw8tOlnO/Fixedblinkie.gif" width="90" />
+               <a href="https://treflemefle.nekoweb.org/" target="_blank">
+                  <img src="https://file.garden/Ztqjvb3upRXqoA_3/Buttons/meflebutton-2.gif" width="80">
+               </a>
+               <a href="https://yumejoshi.nekoweb.org/">
+                  <img src="https://yumejoshi.nekoweb.org/IMG_6566.jpeg" />
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-------second half end------------>
    </div>
+   <!-------script for the pop up------------>
+   <script>
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popup-img");
+
+      document.querySelectorAll(".paragraph img").forEach(img => {
+         img.onclick = function () {
+            popup.style.display = "flex";
+            popupImg.src = this.src;
+         };
+      });
+
+      popup.onclick = function () {
+         popup.style.display = "none";
+      };
+   </script>
+   <!------Slideshow script by w3schooolsss mwehehehe------>
+   <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+         showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+         let i;
+
+         let slides1 = document.getElementsByClassName("mySlides1");
+         let slides2 = document.getElementsByClassName("mySlides2");
+
+         if (n > slides1.length) { slideIndex = 1 }
+         if (n < 1) { slideIndex = slides1.length }
+
+         // Hide all slides
+         for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+         }
+
+         for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+         }
+
+         slides1[slideIndex - 1].style.display = "block";
+         slides2[slideIndex - 1].style.display = "block";
+      }
+
+   </script>
 </body>
