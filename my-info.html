@@ -89,7 +89,7 @@
       .header span {
          position: absolute;
          top: 100px;
-         color:#514246
+         color: #514246
       }
 
       .lacebow {
@@ -219,7 +219,6 @@
          margin: 10px;
          width: 150px;
          height: 150px;
-         border: solid thin;
          position: relative;
          z-index: 10;
          pointer-events: none;
@@ -385,18 +384,45 @@
          background-position: center;
          background-repeat: no-repeat;
          text-align: center;
+         position: relative;
+         z-index: 5;
       }
 
       .web-worker-title span {
-         font-size: 20px;
+         font-size: 10px;
          position: relative;
-         bottom: -8px;
+         bottom: -5px;
+         font-family: 'script';
+         color: #514246;
+         text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
       }
 
       .under {
          width: auto;
-         height: 100px;
+         height: 200px;
          align-items: center;
+
+         position: relative;
+         top: -60px;
+         z-index: 3;
+      }
+
+      .hanging {
+         border: dotted 1px #514246;
+         width: 110px;
+         transform: rotate(90deg);
+         position: relative;
+         z-index: 1;
+         right: -30px;
+      }
+
+      .under img {
+         filter: grayscale(100%);
+         position: relative;
+         z-index: 6;
+         margin: auto;
+         right: -73px;
+         bottom: -70px;
       }
    </style>
    <!-------the image pop up------------>
@@ -407,7 +433,7 @@
 
    <div class="main">
       <div class="header">
-         <span>meet the webmistress</span>
+         <span>meet the webmistress <img src="https://file.garden/aOCBrSuXPw8tOlnO/Needbow.gif" width="30" /></span>
       </div>
 
       <!-------first half start------------>
@@ -499,13 +525,17 @@
          <div class="left-con">
             <div class="web-worker-title"><span>web worker</span></div>
             <div class="under">
-               <img src="https://file.garden/aOCBrSuXPw8tOlnO/Fixedblinkie.gif" width="90" />
+               <img src="https://file.garden/aOCBrSuXPw8tOlnO/Fixedblinkie.gif" width="95" />
+               <br />
                <a href="https://treflemefle.nekoweb.org/" target="_blank">
-                  <img src="https://file.garden/Ztqjvb3upRXqoA_3/Buttons/meflebutton-2.gif" width="80">
+                  <img src="https://file.garden/Ztqjvb3upRXqoA_3/Buttons/meflebutton-2.gif" width="90">
                </a>
+               <br />
                <a href="https://yumejoshi.nekoweb.org/">
                   <img src="https://yumejoshi.nekoweb.org/IMG_6566.jpeg" />
                </a>
+               <div class="hanging"></div>
+               <div class="hanging" style="left: 100px;top:-4px;"></div>
             </div>
          </div>
       </div>
@@ -559,4 +589,45 @@
       }
 
    </script>
+
+    
+  <!----------Disable right clicks---------------------->
+  <script language=JavaScript>
+
+    //Disable right mouse click Script
+    //By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+    //For full source code, visit http://www.dynamicdrive.com
+
+    var message = "If you’re reading this, I know exactly who you are stalker and I  01001100 01101111 01110110 01100101 00100000 01111001 01101111 01110101 ♡";
+
+
+    ///////////////////////////////////
+    function clickIE4() {
+      if (event.button == 2) {
+        alert(message);
+        return false;
+      }
+    }
+
+    function clickNS4(e) {
+      if (document.layers || document.getElementById && !document.all) {
+        if (e.which == 2 || e.which == 3) {
+          alert(message);
+          return false;
+        }
+      }
+    }
+
+    if (document.layers) {
+      document.captureEvents(Event.MOUSEDOWN);
+      document.onmousedown = clickNS4;
+    }
+    else if (document.all && !document.getElementById) {
+      document.onmousedown = clickIE4;
+    }
+
+    document.oncontextmenu = new Function("alert(message);return false")
+
+    // --> 
+  </script>
 </body>
