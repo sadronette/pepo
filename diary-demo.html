@@ -84,6 +84,29 @@
          padding: 0;
       }
 
+      /* Loader container covers the whole screen */
+      #loader {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: #ffffff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         z-index: 9999;
+      }
+
+      /* Spinner animation */
+      .spinner {
+         background: url("https://file.garden/aOCBrSuXPw8tOlnO/29b94891eb0e637d5ae1af37cfdb4e21.gif");
+         background-position: center;
+         background-repeat: no-repeat;
+         width: 500px;
+         height: 500px;
+      }
+
       /*Place holder back background added here + pages whole font family can be changed here*/
       body {
          background: #211111;
@@ -278,6 +301,11 @@
 </head>
 
 <body>
+   <!---loader-->
+   <div id="loader">
+      <div class="spinner"></div>
+   </div>
+
    <script>
       window.addEventListener('load', function () {
          const audio = document.getElementById('myAudio');
@@ -315,48 +343,48 @@
       <!----BACk button, redirects to index page----->
       <a href="../index.html" id="back-button"></a>
    </div>
- 
-  <!----------Disable right clicks---------------------->
-  <script language=JavaScript>
 
-    //Disable right mouse click Script
-    //By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
-    //For full source code, visit http://www.dynamicdrive.com
+   <!----------Disable right clicks---------------------->
+   <script language=JavaScript>
 
-    var message = "If you’re reading this, I know exactly who you are stalker and I  01001100 01101111 01110110 01100101 00100000 01111001 01101111 01110101 ♡";
+      //Disable right mouse click Script
+      //By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+      //For full source code, visit http://www.dynamicdrive.com
+
+      var message = "If you’re reading this, I know exactly who you are stalker and I  01001100 01101111 01110110 01100101 00100000 01111001 01101111 01110101 ♡";
 
 
-    ///////////////////////////////////
-    function clickIE4() {
-      if (event.button == 2) {
-        alert(message);
-        return false;
+      ///////////////////////////////////
+      function clickIE4() {
+         if (event.button == 2) {
+            alert(message);
+            return false;
+         }
       }
-    }
 
-    function clickNS4(e) {
-      if (document.layers || document.getElementById && !document.all) {
-        if (e.which == 2 || e.which == 3) {
-          alert(message);
-          return false;
-        }
+      function clickNS4(e) {
+         if (document.layers || document.getElementById && !document.all) {
+            if (e.which == 2 || e.which == 3) {
+               alert(message);
+               return false;
+            }
+         }
       }
-    }
 
-    if (document.layers) {
-      document.captureEvents(Event.MOUSEDOWN);
-      document.onmousedown = clickNS4;
-    }
-    else if (document.all && !document.getElementById) {
-      document.onmousedown = clickIE4;
-    }
+      if (document.layers) {
+         document.captureEvents(Event.MOUSEDOWN);
+         document.onmousedown = clickNS4;
+      }
+      else if (document.all && !document.getElementById) {
+         document.onmousedown = clickIE4;
+      }
 
-    document.oncontextmenu = new Function("alert(message);return false")
+      document.oncontextmenu = new Function("alert(message);return false")
 
-    // --> 
-  </script>
-  
-     <script>
+      // --> 
+   </script>
+
+   <script>
       window.addEventListener('load', function () {
          const audio = document.getElementById('myAudio');
          audio.play().catch(function (error) {
@@ -365,8 +393,17 @@
       });
    </script>
    <!----AUDIO file ------>
-   <audio id="myAudio" src="https://file.garden/ZlKNlprkUEDiwwYi/Dead%20or%20Alive%20Ultimate%20Soundtrack%20-%20Wired.mp3"
+   <audio id="myAudio"
+      src="https://file.garden/ZlKNlprkUEDiwwYi/Dead%20or%20Alive%20Ultimate%20Soundtrack%20-%20Wired.mp3"
       autoplay></audio>
+   <script>
+      // Simulate loading delay (e.g., fetching data)
+      window.addEventListener("load", function () {
+         // Hide loader and show content
+         document.getElementById("loader").style.display = "none";
+         document.getElementById("content").style.display = "block";
+      });
+   </script>
 </body>
 
 </html>
