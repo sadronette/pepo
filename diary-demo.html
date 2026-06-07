@@ -9,6 +9,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=1" />
+
+
    <!------Style Tags-------------->
    <style>
       /*SCROLLBAR Starts here, this css does not work on firefox ;-;*/
@@ -305,7 +307,7 @@
    <div id="loader">
       <div class="spinner"></div>
    </div>
-
+   <!----AUDIO file ------>
    <script>
       window.addEventListener('load', function () {
          const audio = document.getElementById('myAudio');
@@ -383,19 +385,6 @@
 
       // --> 
    </script>
-
-   <script>
-      window.addEventListener('load', function () {
-         const audio = document.getElementById('myAudio');
-         audio.play().catch(function (error) {
-            console.log('Autoplay prevented:', error);
-         });
-      });
-   </script>
-   <!----AUDIO file ------>
-   <audio id="myAudio"
-      src="https://file.garden/ZlKNlprkUEDiwwYi/Dead%20or%20Alive%20Ultimate%20Soundtrack%20-%20Wired.mp3"
-      autoplay></audio>
    <script>
       // Simulate loading delay (e.g., fetching data)
       window.addEventListener("load", function () {
