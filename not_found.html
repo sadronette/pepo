@@ -7,6 +7,19 @@
     <title>Not found.</title>
 </head>
 <body>
-    hello, this page will not come back up. thank you
+   page in progress
+    <!----AUDIO file ------>
+   <script>
+      window.addEventListener('load', function () {
+         const audio = document.getElementById('myAudio');
+         audio.play().catch(function (error) {
+            console.log('Autoplay prevented:', error);
+         });
+      });
+   </script>
+   <!----AUDIO file ------>
+   <audio id="myAudio"
+      src="https://file.garden/ZlKNlprkUEDiwwYi/January%202014%20-%20Nintendo%20eShop%20Music.mp3"
+      autoplay></audio>
 </body>
 </html>
